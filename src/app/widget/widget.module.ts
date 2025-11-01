@@ -3,11 +3,14 @@ import { CommonModule } from '@angular/common';
 import { WidgetComponent } from './widget.component';
 import { IonicModule } from '@ionic/angular';
 
+import { WidgetRoutingModule } from './widget-routing.module';
+
 @NgModule({
   declarations: [WidgetComponent],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    WidgetRoutingModule
   ]
 })
 export class WidgetModule { }

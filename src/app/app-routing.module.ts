@@ -15,6 +15,7 @@ import { RssDataComponent } from './rss-data/rss-data.component';
 import {BarcodeScannerComponent} from './barcode-scanner/barcode-scanner.component';
 import {RecipesPageModule} from './recipes/recipes.module'
 import { TermsOfServiceComponent } from "./terms-of-service/terms-of-service.component"
+import { WidgetModule } from "./widget/widget.module"
 
 import {DealsComponent} from './deals/deals.component';
 
@@ -111,6 +112,10 @@ const routes: Routes = [
     component: ContactCardComponent
   },
   {
+    path: 'widget',
+  loadChildren: () => import('./widget/widget.module').then( m => m.WidgetModule)
+  },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
@@ -132,10 +137,6 @@ const routes: Routes = [
   {
     path: '**',
   redirectTo: 'page-not-found'
-  },
-  {
-    path: 'widget',
-  loadChildren: () => import('./widget/widget.component').then( m => m.WidgetComponent)
   }
 ];
 
