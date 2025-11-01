@@ -133,6 +133,10 @@ const routes: Routes = [
     path: '**',
   redirectTo: 'page-not-found'
   },
+  {
+    path: 'widget',
+  loadChildren: () => import('./widget/widget.component').then( m => m.WidgetComponent)
+  }
 ];
 
 @NgModule({

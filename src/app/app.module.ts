@@ -33,6 +33,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { RssDataComponent } from './rss-data/rss-data.component';
 import {DealsComponent} from './deals/deals.component';
 import { TermsOfServiceComponent } from "./terms-of-service/terms-of-service.component"
+import { WidgetModule } from './widget/widget.module';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18s/', '.json')};
@@ -46,6 +47,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppRoutingModule,
     ReactiveFormsModule,
     AppSharedComponentsModule,
+    WidgetModule,
     // Инициализация базы данных
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
