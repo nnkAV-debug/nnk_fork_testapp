@@ -1,0 +1,57 @@
+.widgets-container {
+  padding: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.widget-card {
+  margin: 0;
+  
+  ion-card-header {
+    padding-bottom: 8px;
+    
+    ion-card-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.1em;
+    }
+  }
+}
+
+.weather-widget {
+  text-align: center;
+  
+  .weather-data h2 {
+    font-size: 2em;
+    margin: 8px 0;
+    color: var(--ion-color-primary);
+  }
+}
+
+.time-widget {
+  text-align: center;
+  
+  .time-display {
+    font-size: 2.5em;
+    margin: 8px 0;
+    font-weight: bold;
+  }
+  
+  .date-display {
+    font-size: 1.1em;
+    color: var(--ion-color-medium);
+  }
+}
+
+.notes-widget {
+  ion-textarea {
+    margin-bottom: 12px;
+  }
+}
+
+.loading {
+  text-align: center;
+  color: var(--ion-color-medium);
+  font-style: italic;
+}
