@@ -34,6 +34,20 @@
             <p class="date-display">{{ widget.data.date }}</p>
           </div>
 
+          <!-- Виджет фазы луны -->
+          <div *ngIf="widget.type === 'moon'" class="moon-widget">
+            <div *ngIf="widget.data.phase" class="moon-data">
+              <div class="moon-emoji">{{ widget.data.emoji }}</div>
+              <h3>{{ widget.data.phase }}</h3>
+              <p class="moon-description">{{ widget.data.description }}</p>
+              <div class="moon-details">
+                <p><strong>{{loc.MOON_AGE}}:</strong> {{ widget.data.age }}</p>
+              </div>
+            </div>
+            <div *ngIf="!widget.data.phase" class="loading">
+              {{loc.LOADING}}...
+            </div>
+          </div>
         </ion-card-content>
 
       </ion-card>

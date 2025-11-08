@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 interface Widget{
   id: string
   title: string
-  type: 'weather' | 'time' | 'notes'
+  type: 'weather' | 'time' | 'moon'
   data: any
   icon: string
 }
@@ -20,7 +20,6 @@ export class WidgetComponent implements OnInit {
   formattedDate = this.currentDate.toLocaleDateString();
   formattedTime = this.currentDate.toLocaleTimeString();
 
-  // ИСПРАВЛЕНО: было "wigets", стало "widgets"
   widgets: Widget[] = [
     { 
       id: 'weather', 
@@ -37,12 +36,23 @@ export class WidgetComponent implements OnInit {
       icon: 'time'
     },
     { 
-      id: 'notes', 
-      title: 'Заметки', 
-      type: 'notes', 
-      data: { content: '', saved: false },
-      icon: 'document'
+      id: 'moon', 
+      title: 'Фаза Луны', 
+      type: 'moon', 
+      data: { phase: null, illumination: null, age: null },
+      icon: 'moon'
     },
+  ];
+   
+   moonPhases = [
+    { name: 'Новолуние', emoji: '🌑', min: 0, max: 1 },
+    { name: 'Молодая луна', emoji: '🌒', min: 1, max: 6.38 },
+    { name: 'Первая четверть', emoji: '🌓', min: 6.38, max: 8.38 },
+    { name: 'Прибывающая луна', emoji: '🌔', min: 8.38, max: 13.38 },
+    { name: 'Полнолуние', emoji: '🌕', min: 13.38, max: 15.38 },
+    { name: 'Убывающая луна', emoji: '🌖', min: 15.38, max: 20.38 },
+    { name: 'Последняя четверть', emoji: '🌗', min: 20.38, max: 22.38 },
+    { name: 'Старая луна', emoji: '🌘', min: 22.38, max: 29.53 }
   ];
 
   constructor() { }
@@ -50,14 +60,13 @@ export class WidgetComponent implements OnInit {
   ngOnInit() {
     this.getWeatherData();
     this.startTimeUpdate();
-    
-    // Временная заглушка для локализации
+    this.getMoonPhase();
     this.loc = {
       COMPONENT_TITLE: 'Виджеты',
       LOADING: 'Загрузка',
-      NOTES_PLACEHOLDER: 'Введите ваши заметки здесь...',
-      SAVE: 'Сохранить',
-      SAVED: 'Сохранено'
+      MOON_PHASE: 'Фаза',
+      MOON_AGE: 'Возраст луны',
+      DAYS: 'дней'
     };
   }
 
@@ -81,12 +90,61 @@ export class WidgetComponent implements OnInit {
     }, 1000);
   }
 
-  saveNote(content: string) {
-    this.widgets[2].data = {
-      content: content,
-      saved: true
+   getMoonPhase() {
+    // Точный расчет фазы луны на сегодня
+    setTimeout(() => {
+      const moonData = this.calculateMoonPhase(this.currentDate);
+      this.widgets[2].data = moonData;
+    }, 1000);
+  }
+
+  calculateMoonPhase(date: Date): any {
+    const knownNewMoon = new Date('2024-01-11T00:00:00Z').getTime();
+    const currentTime = date.getTime();
+    
+    // Лунный цикл в миллисекундах (29.53 дней)
+    const lunarCycleMs = 29.53 * 24 * 60 * 60 * 1000;
+    
+    // Прошедшее время с известного новолуния
+    const timeSinceNewMoon = currentTime - knownNewMoon;
+    
+    // Возраст луны в днях
+    let moonAge = (timeSinceNewMoon % lunarCycleMs) / (24 * 60 * 60 * 1000);
+    if (moonAge < 0) moonAge += 29.53;
+    
+    // Определение фазы луны
+    const phase = this.determineMoonPhase(moonAge);
+    
+    return {
+      phase: phase.name,
+      emoji: phase.emoji,
+      age: Math.round(moonAge * 10) / 10 + ' ' + this.loc.DAYS,
+      description: this.getPhaseDescription(phase.name)
     };
-    // Здесь можно добавить сохранение в localStorage
-    localStorage.setItem('widget-notes', content);
+  }
+
+  // Определение фазы луны по возрасту
+  determineMoonPhase(moonAge: number): any {
+    for (let phase of this.moonPhases) {
+      if (moonAge >= phase.min && moonAge < phase.max) {
+        return phase;
+      }
+    }
+    return this.moonPhases[0];
+  }
+
+  // Описание фазы луны
+  getPhaseDescription(phaseName: string): string {
+    const descriptions: any = {
+      'Новолуние': 'Луна не видна на небе',
+      'Молодая луна': 'Тонкий серп после новолуния',
+      'Первая четверть': 'Освещена половина лунного диска',
+      'Прибывающая луна': 'Луна продолжает расти',
+      'Полнолуние': 'Луна полностью освещена',
+      'Убывающая луна': 'Луна начинает уменьшаться',
+      'Последняя четверть': 'Освещена вторая половина диска',
+      'Старая луна': 'Тонкий серп перед новолунием'
+    };
+    return descriptions[phaseName] || 'Фаза луны';
   }
 }

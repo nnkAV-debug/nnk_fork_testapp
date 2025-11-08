@@ -19,6 +19,16 @@
   }
 }
 
+.widget-icon-image {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.widget-icon {
+  font-size: 24px;
+}
+
 .weather-widget {
   text-align: center;
   
@@ -44,9 +54,40 @@
   }
 }
 
-.notes-widget {
-  ion-textarea {
-    margin-bottom: 12px;
+.moon-widget {
+  text-align: center;
+  
+  .moon-data {
+    .moon-emoji {
+      font-size: 4em;
+      margin: 8px 0;
+      line-height: 1;
+    }
+    
+    h3 {
+      font-size: 1.3em;
+      margin: 8px 0;
+      color: var(--ion-color-primary);
+    }
+    
+    .moon-description {
+      font-style: italic;
+      color: var(--ion-color-medium);
+      margin-bottom: 16px;
+      font-size: 0.9em;
+    }
+    
+    .moon-details {
+      text-align: left;
+      background: var(--ion-color-light);
+      padding: 12px;
+      border-radius: 8px;
+      
+      p {
+        margin: 4px 0;
+        font-size: 0.9em;
+      }
+    }
   }
 }
 
