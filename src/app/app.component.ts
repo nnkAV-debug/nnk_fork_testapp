@@ -53,6 +53,7 @@ export class AppComponent {
     { title: 'Fashion', url: '/fashion', icon: '' },
     { title: 'Profile', url: '/profil', icon: '' },
     { title: 'RSA', url: '/rsa', icon: ''},
+    { title: 'calc.name', url: '/calc', icon: ''},
   ];
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('ru');

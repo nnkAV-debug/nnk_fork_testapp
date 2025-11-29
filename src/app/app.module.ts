@@ -48,7 +48,8 @@ import { RsaComponent } from './rsa/rsa.component';
 import { MapsComponent } from './maps/maps.component';
 import { MiniblogComponent } from './miniblog/miniblog.component';
 import { AddBlogModalComponent } from './miniblog/add-blog-modal.component';
-
+import { RssDataComponent } from './rss-data/rss-data.component';
+import {CalcModule} from './calc/calc.module'
 // Фабрика для загрузчика переводов
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18s/', '.json');
@@ -89,6 +90,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddBlogModalComponent
   ],
   imports: [
+    CalcModule,
     BrowserModule,
     HttpClientModule, // Убедитесь, что этот импорт только один
     IonicModule.forRoot(),
