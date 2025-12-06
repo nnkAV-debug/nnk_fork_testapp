@@ -12,8 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
     IonicModule,
     FormsModule,
     CalcRoutingModule,
-    TranslateModule
-  ]
-
+    TranslateModule,
+  ],
 })
-export class CalcModule { }
+export class CalcModule {}

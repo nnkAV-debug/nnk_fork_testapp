@@ -31,11 +31,11 @@
 
 .mode-switcher-under-display {
   margin-bottom: 15px;
-  
+
   ion-segment {
     --background: var(--ion-color-light);
   }
-  
+
   ion-segment-button {
     --color: var(--ion-color-medium);
     --color-checked: var(--ion-color-primary);
@@ -53,7 +53,7 @@ ion-button {
   height: 60px;
   font-size: 1.2em;
   --border-radius: 10px;
-  
+
   &.extended-button {
     font-size: 0.9em;
     --background: #6c757d;
@@ -89,7 +89,7 @@ ion-button {
   background: white;
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  
+
   ion-card {
     margin: 0;
     box-shadow: none;
@@ -98,11 +98,11 @@ ion-button {
 
 .mode-switcher {
   margin-bottom: 15px;
-  
+
   ion-segment {
     --background: var(--ion-color-light);
   }
-  
+
   ion-segment-button {
     --color: var(--ion-color-medium);
     --color-checked: var(--ion-color-primary);
@@ -128,12 +128,12 @@ ion-button {
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
   margin-bottom: 15px;
-  
+
   ion-button {
     height: 50px;
     font-size: 1.1em;
     --border-radius: 8px;
-    
+
     &.extended-button {
       font-size: 0.8em;
       --background: #6c757d;
@@ -147,7 +147,7 @@ ion-button {
 }
 
 .calculator-popup::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   left: 0;

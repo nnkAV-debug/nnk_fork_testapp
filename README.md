@@ -10,6 +10,10 @@ Full [Documentation](https://stipot.github.io/ionic7-templete-app/).
 ```
 node -v
 ```
+## Install CLI
+```bash
+npm install -g @ionic/cli
+```
 
 ## Install dependencies
 
@@ -31,6 +35,27 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ### To test the app in the browser
 
 Run `ionic serve` to start a live-reload dev server
+
+### Run tests
+On linux
+```
+export FIREFOX_BIN=/usr/bin/firefox
+ng test
+```
+
+## IONIC 8 compatibility
+
+### Usage of http client
+>app.module.ts
+```typescript
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
+  bootstrap: [AppComponent],
+})
+```
 
 ## Development Workflow
 

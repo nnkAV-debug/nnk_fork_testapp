@@ -6,8 +6,8 @@ import { CalcComponent } from './calc.component';
 const routes: Routes = [
   {
     path: '',
-    component: CalcComponent
-  }
+    component: CalcComponent,
+  },
 ];
 
 @NgModule({

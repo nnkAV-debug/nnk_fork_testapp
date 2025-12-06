@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { register } from 'swiper/element/bundle';
 import { TranslateService } from '@ngx-translate/core';
+// import { title } from 'process';
+// import { url } from 'inspector';
+// import { Icon } from 'ionicons/dist/types/components/icon/icon';
 
-register ();
-
+register();
 
 @Component({
   selector: 'app-root',
@@ -12,35 +14,59 @@ register ();
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'входящие' },
-
-    // Добавляем поле для перехода на страницу пометок
-    { title: 'Intro', url: '/intro', icon: '' },
-    { title: 'Profile', url: '/profil', icon: '' },
-    { title: 'User', url: '/user', icon: '' },
-    { title: 'Settings', url: '/settings', icon: '' },
-    { title: 'Contact card', url: '/contact-card', icon: '' },
-    { title: 'notes', url: '/notes', icon: 'Пометки' },
-    { title: 'Login', url: '/login', icon: '' },
-    { title: 'Signup', url: '/signup', icon: '' },
-    { title: 'Terms of service', url: '/terms-of-service', icon: '' },
-    { title: 'policy-privacy', url: '/privacy-policy', icon: 'battery-full-outline' },
-    { title: 'Deals', url: '/deals', icon: '' },
-    { title: 'Recipes', url: '/recipes', icon: '' },
-    { title: 'Overview', url: '/owerview', icon: '' },
-    { title: 'Fashion', url: '/fashion', icon: '' },
-    { title: 'Forgot password', url: '/forgot-password', icon: '' },
-    { title: 'RSS data', url: '/rss-data', icon: '' },
-    { title: 'ToDo list', url: '/todo-list', icon: 'todo-list' },
-    { title: 'Forms', url: '/forms', icon: '' },
-    { title: 'filters', url:'/filters',icon: 'reader-outline'},
+    { title: 'FrontPage', url: '/front-layout', icon: 'grid' },
+    { title: 'Settings', url: '/settings', icon: 'settings' },
+    { title: 'Intro', url: '/intro', icon: 'easel' },
+    { title: '2048 Game', url: '/game-2048', icon: 'game-controller' },
+    { title: 'calc.name', url: '/calc', icon: 'calculator' },
+    { title: 'MAP.YANDEXMAPS', url: '/maps', icon: 'map' },
+    { title: 'GAZON.MENU', url: '/gazon', icon: 'sync' },
+    { title: 'Miniblog', url: '/miniblog', icon: 'book' },
+    { title: 'Kanban', url: '/kanban', icon: 'albums' },
+    { title: 'Recipes', url: '/recipes', icon: 'pizza' },
+    { title: 'Mood calendar', url: '/mood-calendar', icon: 'calendar' },
+    { title: 'CRYPTO_MODULE.COMPONENT_TITLE', url: '/cryptorates', icon: 'cash' },
+    { title: 'News', url: '/rss-data', icon: 'newspaper' },
+    { title: 'Notes', url: '/notes', icon: 'create' },
+    { title: 'ToDo list', url: '/todo-list', icon: 'checkmark-done' },
+    { title: 'ToDo task', url: '/todo-task', icon: 'checkmark-done-circle' },
+    { title: 'VideoPlayer', url: '/videoplayer', icon: 'videocam' },
+    { title: 'mplayer', url: '/mplayer', icon: 'musical-notes' },
+    { title: 'scilink', url: '/scilink', icon: 'earth' },
+    { title: 'barcode-scanner', url: '/barcode-scanner', icon: 'barcode' },
+    { title: 'camera', url: '/camera', icon: '' },
+    { title: 'File-viewer', url: '/file-viewer', icon: '' },
     { title: 'Validations', url: '/validations', icon: '' },
-    { title: 'barcode-scanner', url: '/barcode-scanner', icon: '' },
-    { title: 'calc.name', url: '/calc', icon: ''},
+    { title: 'filters', url: '/filters', icon: 'reader-outline' },
+    { title: 'DragAndDrop', url: '/drag-and-drop', icon: '' },
+    { title: 'Shopping', url: '/shopping', icon: '' },
+    { title: 'RSA', url: '/rsa', icon: '' },
+    { title: 'Signup', url: '/signup', icon: '' },
+    { title: 'Login', url: '/login', icon: '' },
+    { title: 'Forgot password', url: '/forgot-password', icon: '' },
+    { title: 'TERMS_TITLE', url: '/terms-of-service', icon: '' },
+    {
+      title: 'PRIVACY_TITLE',
+      url: '/privacy-policy',
+      icon: 'battery-full-outline',
+    },
+    { title: 'User', url: '/user', icon: '' },
+    // Добавляем поле для перехода на страницу пометок
+    {
+      title: 'Компоненты в стадии разработки:',
+      url: '/front-layout',
+      icon: '',
+    },
+    { title: 'Water-tracker', url: '/water-tracker', icon: 'water' },    
+    { title: 'Contact card', url: '/contact-card', icon: '' },    
+    { title: 'Inbox', url: '/folder/inbox', icon: 'входящие' },
+    { title: 'Deals', url: '/deals', icon: '' },
+    { title: 'Fashion', url: '/fashion', icon: '' },
+    { title: 'Profile', url: '/profil', icon: '' },
   ];
-  public labels = ['Семья', 'Друзья', 'Заметки', 'Работа', 'Путешествия', 'Напоминания'];
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('ru');
+    this.translate.addLangs(['en', 'ru']);
     this.translate.use('ru');
   }
 
