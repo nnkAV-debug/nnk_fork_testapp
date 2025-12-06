@@ -2,21 +2,21 @@
   "1": "Welcome",
   "Inbox": "Inbox",
   "outbox": "Outbox",
-  "favorites": "Like",
-  "archived": "Archive",
-  "trash": "TrashBox",
+  "favorites": "Favorites",
+  "archived": "Archived",
+  "trash": "Trash",
   "spam": "Spam",
-  "Notes": "Notes",
+  "notes": "Notes",
   "filters": "Filters",
   "validations": "validations",
-  "TERMS_TITLE": "Terms of service",
-  "PRIVACY_TITLE": "Privacy policy",
-  "login": "Login",
+  "TERMS_TITLE": "Terms of Service",
+  "PRIVACY_TITLE": "Privacy Policy",
+  "login": "Username",
   "Семья": "Family",
   "Друзья": "Friends",
-  "Заметки": "Notes",
+  "Notes": "Notes",
   "Работа": "Work",
-  "Путешествия": "Tours",
+  "Путешествия": "Travel",
   "Напоминания": "Reminders",
   "Validations": "Validations",
   "Username": "Username",
@@ -32,7 +32,7 @@
   "Password": "Password",
   "password": "password",
   "ToDo list": "ToDo list",
-  "barcode-scanner": "Barcode Scanner",
+  "barcode-scanner": "Barcode scanner",
   "Contact card": "Contact card",
   "Status": "Status",
   "Following": "Following",
@@ -40,30 +40,42 @@
   "Birthday": "Birthday",
   "Address": "Address",
   "Marriage": "Marriage",
-  "Курсы криптовалют": "Crypto rates",
-  "Время": "Time",
-  "Цена": "Pice",
-  "Загрузка": "Loading",
-  "Shopping": "Shopping",
-  "RSA": "RSA encription",
-
-  "Recipes": "Recipes",
   "News": "News",
   "Save": "Save",
-  "FrontPage": "All components",
-
-  "Mood calendar": "Mood Calendar",
+  "Shopping": "Shopping list",
+  "RSA": "RSA Encryption",
+  "Settings": "Settings",
+  "2048 Game": "2048 Game",
+  "Miniblog": "Miniblog",
+  "Kanban": "Kanban",
+  "Recipes": "Recipes",
+  "VideoPlayer": "VideoPlayer",
+  "mplayer": "MPlayer",
+  "scilink": "Scientific links",
+  "camera": "Camera",
+  "File-viewer": "File viewer",
+  "Signup": "Sign up",
+  "Login": "Login",
+  "Forgot password": "Forgot password",
+  "User": "User",
+  "Deals": "Deals",
+  "Fashion": "Fashion",
+  "Profile": "Profile",
+  "ToDo task": "ToDo task",
+  "Mood calendar": "Mood calendar",
   "Mood Statistic": "Mood Statistic",
+  "Water-tracker": "Water balance",
 
-  "Water-tracker": "Water-tracker",
-
+  "FRONTPAGE": {
+    "COMPONENT_TITLE": "FrontPage"
+  },
   "MPlayer": "MPlayer",
-  "DragAndDrop": "Drag and drop",
+  "DragAndDrop": "Drag and Drop",
   "CRYPTO_MODULE": {
-    "COMPONENT_TITLE": "Сryptorates",
+    "COMPONENT_TITLE": "Cryptocurrency rates",
     "CRYPTO_TIME": "Updated",
     "CRYPTO_PRICE": "Price",
-    "CRYPTO_NAME": "Name",
+    "CRYPTO_NAME": "Cryptocurrency",
     "CRYPTO_LOADING": "Loading..."
   },
   "MOOD": {
@@ -91,29 +103,28 @@
     "FRENCH": "French",
     "ITALIAN": "Italian",
     "ACTIVE": "Active",
-    "LANGUAGE_REMINDER": "Changing the language",
+    "LANGUAGE_REMINDER": "Language change",
     "GOTO_SETTINGS": "Go to settings"
   },
   "MAP": {
-    "TOP_TITTLE": "YandexMap",
-    "YANDEXMAPS": "YandexMap",
+    "TOP_TITTLE": "Yandex Map",
+    "YANDEXMAPS": "Yandex Map",
     "SIMPLE_MAP": "Simple map",
-    "SIMPLE_MAP_TEXT": "This is the Yandex base map embedded in the Ionic component.",
-    "MAP_WITH_POINT": "Map with a dot",
-    "MAP_WITH_POINT_TEXT": "This is already a map with a label through the code and processing by the click coordinate."
+    "SIMPLE_MAP_TEXT": "This is a basic Yandex map embedded in an Ionic component.",
+    "MAP_WITH_POINT": "Map with point",
+    "MAP_WITH_POINT_TEXT": "This is a map with a marker via code and click coordinate handling."
   },
   "NOTES": {
-    "TEXT_NOTES": "Text of the note",
+    "TEXT_NOTES": "Note text",
     "NOTES_MISSING": "Notes are missing",
     "DELETE_MARKED_NOTES": "Delete all marked notes"
   },
   "GAZON": {
-    "MENU": "Format Converter"
+    "MENU": "Format converter"
   },
   "calc": {
-    "name": "Сalculator"
+    "name": "Calculator"
   },
-
   "CALCULATOR": {
     "TITLE": "Calculator",
     "BASIC": "Basic",
@@ -121,7 +132,7 @@
   },
   "FORM": {
     "TITLE": "Form with calculator integration",
-    "SUBTITLE": "Use calculator to fill in fields",
+    "SUBTITLE": "Use the calculator to fill in the fields",
     "AMOUNT_LABEL": "Amount",
     "AMOUNT_PLACEHOLDER": "Enter value or use calculator",
     "RESULT_LABEL": "Calculation result",
@@ -129,8 +140,8 @@
     "CLEAR_FORM_BUTTON": "Clear form"
   },
   "POPUP": {
-    "TITLE": "Form calculator",
-    "SUBTITLE": "Calculate value and press \"Apply\"",
+    "TITLE": "Calculator for form",
+    "SUBTITLE": "Calculate value and click \"Apply\"",
     "APPLY_BUTTON": "Apply result",
     "CLOSE_BUTTON": "Close"
   }
