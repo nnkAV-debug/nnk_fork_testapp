@@ -63,12 +63,17 @@ const routes: Routes = [
     component: ForgotPasswordComponent
   },
   {
-    path: 'calc',
-    loadChildren: () => import('./calc/calc.module').then(m => m.CalcModule)
+    path: '',
+    redirectTo: 'front-layout',
+    pathMatch: 'full'
   },
   {
     path:'maps',
     component: MapsComponent
+  },
+  {
+      path: 'calc',
+    loadChildren: () => import('./calc/calc.module').then(m => m.CalcModule)
   },
   {
     path: 'folder/:id',
@@ -85,6 +90,10 @@ const routes: Routes = [
   {
     path: 'page-not-found',
     loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
   },
   {
     path: 'mood-calendar',

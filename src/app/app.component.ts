@@ -51,14 +51,9 @@ export class AppComponent {
       icon: 'battery-full-outline',
     },
     { title: 'User', url: '/user', icon: '' },
+    { title: 'Contact card', url: '/contact-card', icon: '' },
     // Добавляем поле для перехода на страницу пометок
-    {
-      title: 'Компоненты в стадии разработки:',
-      url: '/front-layout',
-      icon: '',
-    },
     { title: 'Water-tracker', url: '/water-tracker', icon: 'water' },    
-    { title: 'Contact card', url: '/contact-card', icon: '' },    
     { title: 'Inbox', url: '/folder/inbox', icon: 'входящие' },
     { title: 'Deals', url: '/deals', icon: '' },
     { title: 'Fashion', url: '/fashion', icon: '' },
