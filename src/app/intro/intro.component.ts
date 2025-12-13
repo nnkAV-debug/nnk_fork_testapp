@@ -7,6 +7,7 @@ import Swiper from 'swiper';
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent implements AfterViewInit {
+  titleText: string = "Добро пожаловать!"
   slides = [
     {
       image: './assets/sample-images/prikol2.jpg',
