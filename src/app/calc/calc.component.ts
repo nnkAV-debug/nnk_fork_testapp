@@ -19,11 +19,11 @@ export class CalcComponent implements OnInit, OnDestroy {
   calculatorButtons: CalculatorButton[] = [];
   isExtendedMode: boolean = false;
   extendedButtons: CalculatorButton[] = [];
-  
+
   inputValue: string = '';
   showCalculator: boolean = false;
   popupExpression: string = '';
-  
+
   titleText: string = 'Калькулятор';
   basicText: string = 'Обычный';
   advancedText: string = 'Расширенный';
@@ -36,18 +36,18 @@ export class CalcComponent implements OnInit, OnDestroy {
   popupSubtitle: string = 'Вычислите значение и нажмите "Применить"';
   applyButton: string = 'Применить результат';
   closeButton: string = 'Закрыть';
-  
+
   private langSub!: Subscription;
 
   constructor(private translate: TranslateService) {}
 
   async ngOnInit() {
     await this.loadTranslations();
-    
+
     this.langSub = this.translate.onLangChange.subscribe(async () => {
       await this.loadTranslations();
     });
-    
+
     this.initializeCalculatorButtons();
     this.initializeExtendedButtons();
   }
@@ -61,16 +61,28 @@ export class CalcComponent implements OnInit, OnDestroy {
   private async loadTranslations() {
     this.titleText = await this.translate.get('CALCULATOR.TITLE').toPromise();
     this.basicText = await this.translate.get('CALCULATOR.BASIC').toPromise();
-    this.advancedText = await this.translate.get('CALCULATOR.ADVANCED').toPromise();
+    this.advancedText = await this.translate
+      .get('CALCULATOR.ADVANCED')
+      .toPromise();
     this.formTitle = await this.translate.get('FORM.TITLE').toPromise();
     this.formSubtitle = await this.translate.get('FORM.SUBTITLE').toPromise();
-    this.amountLabel = await this.translate.get('FORM.AMOUNT_LABEL').toPromise();
-    this.amountPlaceholder = await this.translate.get('FORM.AMOUNT_PLACEHOLDER').toPromise();
-    this.clearFormButton = await this.translate.get('FORM.CLEAR_FORM_BUTTON').toPromise();
+    this.amountLabel = await this.translate
+      .get('FORM.AMOUNT_LABEL')
+      .toPromise();
+    this.amountPlaceholder = await this.translate
+      .get('FORM.AMOUNT_PLACEHOLDER')
+      .toPromise();
+    this.clearFormButton = await this.translate
+      .get('FORM.CLEAR_FORM_BUTTON')
+      .toPromise();
     this.popupTitle = await this.translate.get('POPUP.TITLE').toPromise();
     this.popupSubtitle = await this.translate.get('POPUP.SUBTITLE').toPromise();
-    this.applyButton = await this.translate.get('POPUP.APPLY_BUTTON').toPromise();
-    this.closeButton = await this.translate.get('POPUP.CLOSE_BUTTON').toPromise();
+    this.applyButton = await this.translate
+      .get('POPUP.APPLY_BUTTON')
+      .toPromise();
+    this.closeButton = await this.translate
+      .get('POPUP.CLOSE_BUTTON')
+      .toPromise();
   }
 
   openCalculator() {
@@ -99,7 +111,12 @@ export class CalcComponent implements OnInit, OnDestroy {
     this.calculatorButtons = [
       { label: 'C', action: 'clear', color: 'danger', value: 'clear' },
       { label: '( )', action: 'brackets', color: 'warning', value: 'brackets' },
-      { label: '%', action: 'percentage', color: 'warning', value: 'percentage' },
+      {
+        label: '%',
+        action: 'percentage',
+        color: 'warning',
+        value: 'percentage',
+      },
       { label: '/', action: 'divide', color: 'warning', value: '/' },
       { label: '7', action: '7', color: 'light', value: '7' },
       { label: '8', action: '8', color: 'light', value: '8' },
@@ -116,7 +133,7 @@ export class CalcComponent implements OnInit, OnDestroy {
       { label: '0', action: '0', color: 'light', value: '0' },
       { label: '.', action: 'decimal', color: 'medium', value: '.' },
       { label: '←', action: 'backspace', color: 'medium', value: 'backspace' },
-      { label: '=', action: 'calculate', color: 'primary', value: 'calculate' }
+      { label: '=', action: 'calculate', color: 'primary', value: 'calculate' },
     ];
   }
 
@@ -124,7 +141,12 @@ export class CalcComponent implements OnInit, OnDestroy {
     this.extendedButtons = [
       { label: 'C', action: 'clear', color: 'danger', value: 'clear' },
       { label: '( )', action: 'brackets', color: 'warning', value: 'brackets' },
-      { label: '%', action: 'percentage', color: 'warning', value: 'percentage' },
+      {
+        label: '%',
+        action: 'percentage',
+        color: 'warning',
+        value: 'percentage',
+      },
       { label: '/', action: 'divide', color: 'warning', value: '/' },
       { label: 'log', action: 'log', color: 'tertiary', value: 'log' },
       { label: 'ln', action: 'ln', color: 'tertiary', value: 'ln' },
@@ -149,7 +171,7 @@ export class CalcComponent implements OnInit, OnDestroy {
       { label: '0', action: '0', color: 'light', value: '0' },
       { label: '.', action: 'decimal', color: 'medium', value: '.' },
       { label: '←', action: 'backspace', color: 'medium', value: 'backspace' },
-      { label: '=', action: 'calculate', color: 'primary', value: 'calculate' }
+      { label: '=', action: 'calculate', color: 'primary', value: 'calculate' },
     ];
   }
 
@@ -169,9 +191,13 @@ export class CalcComponent implements OnInit, OnDestroy {
     this.handleCalculatorButton(button, 'popup');
   }
 
-  private handleCalculatorButton(button: CalculatorButton, type: 'main' | 'popup') {
+  private handleCalculatorButton(
+    button: CalculatorButton,
+    type: 'main' | 'popup'
+  ) {
     const value = button.value;
-    const currentExpression = type === 'main' ? this.expression : this.popupExpression;
+    const currentExpression =
+      type === 'main' ? this.expression : this.popupExpression;
     const setExpression = (expr: string) => {
       if (type === 'main') {
         this.expression = expr;
@@ -239,8 +265,8 @@ export class CalcComponent implements OnInit, OnDestroy {
         if (expr[i] === '(') balance++;
         if (expr[i] === ')') balance--;
       }
-      
-      if (balance > 0 && (/[0-9)]$/.test(expr))) {
+
+      if (balance > 0 && /[0-9)]$/.test(expr)) {
         return expr + ')';
       } else {
         if (/[0-9)]$/.test(expr)) {
@@ -255,7 +281,7 @@ export class CalcComponent implements OnInit, OnDestroy {
   private percentageLogic(expr: string): string {
     try {
       if (expr.trim() === '') return expr;
-      
+
       const numbers = expr.match(/(\d+(?:\.\d+)?)$/);
       if (numbers) {
         const lastNumber = parseFloat(numbers[0]);
@@ -284,7 +310,7 @@ export class CalcComponent implements OnInit, OnDestroy {
   private calculateLogic(expr: string): string {
     try {
       if (expr.trim() === '') return expr;
-      
+
       let safeExpression = expr
         .replace(/sqrt\(/g, 'Math.sqrt(')
         .replace(/sin\(/g, 'Math.sin(')
@@ -293,23 +319,23 @@ export class CalcComponent implements OnInit, OnDestroy {
         .replace(/ln\(/g, 'Math.log(')
         .replace(/π/g, Math.PI.toString())
         .replace(/e/g, Math.E.toString());
-      
+
       let balance = 0;
       for (let i = 0; i < safeExpression.length; i++) {
         if (safeExpression[i] === '(') balance++;
         if (safeExpression[i] === ')') balance--;
       }
-      
+
       for (let i = 0; i < balance; i++) {
         safeExpression += ')';
       }
-      
+
       const result = new Function('return ' + safeExpression)();
-      
+
       if (!isFinite(result) || isNaN(result)) {
         return 'Ошибка';
       }
-      
+
       return this.roundResult(result).toString();
     } catch (e) {
       return 'Ошибка';
@@ -348,23 +374,20 @@ export class CalcComponent implements OnInit, OnDestroy {
           this.expression += key;
         }
       }
-    }
-    else if (key === 'Enter' || key === '=') {
+    } else if (key === 'Enter' || key === '=') {
       event.preventDefault();
       if (this.showCalculator) {
         this.popupExpression = this.calculateLogic(this.popupExpression);
       } else {
         this.expression = this.calculateLogic(this.expression);
       }
-    }
-    else if (key === 'Backspace') {
+    } else if (key === 'Backspace') {
       if (this.showCalculator) {
         this.popupExpression = this.popupExpression.slice(0, -1);
       } else {
         this.expression = this.expression.slice(0, -1);
       }
-    }
-    else if (key === 'Escape' || key.toLowerCase() === 'c') {
+    } else if (key === 'Escape' || key.toLowerCase() === 'c') {
       if (this.showCalculator) {
         this.popupExpression = '';
       } else {

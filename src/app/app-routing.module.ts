@@ -34,6 +34,15 @@ import { WaterTrackerComponent } from './water-tracker/water-tracker.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'front-layout',
+    pathMatch: 'full'
+  },  
+{
+      path: 'game-2048',
+    loadChildren: () => import('./g2048/g2048.module').then(m => m.G2048Module)
+  },
+  {
     path: 'gazon',
     component: GazonComponent
   },

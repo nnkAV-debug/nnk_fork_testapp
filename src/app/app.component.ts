@@ -7,7 +7,6 @@ import { TranslateService } from '@ngx-translate/core';
 
 register();
 
-
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -15,50 +14,54 @@ register();
 })
 export class AppComponent {
   public appPages = [
-    {title: 'MAP.YANDEXMAPS', url: '/maps', icon: ''},
-    {title: 'GAZON.MENU', url: '/gazon', icon: ''},
-    { title: 'FrontPage', url: '/front-layout', icon: 'front-layout' },
-    { title: 'Settings', url: '/settings', icon: '' },
-    { title: 'Miniblog', url: '/miniblog', icon: '' },
-    { title: 'Intro', url: '/intro', icon: '' },
-    { title: 'Water-tracker', url: '/water-tracker', icon: '' },
-    { title: 'Kanban', url: '/kanban', icon: '' },
-    { title: 'Mood calendar', url: '/mood-calendar', icon: '' },
-    { title: 'TERMS_TITLE', url: '/terms-of-service', icon: '' },
-    { title: 'PRIVACY_TITLE', url: '/privacy-policy', icon: 'battery-full-outline' },
+    { title: 'FrontPage', url: '/front-layout', icon: 'grid' },
+    { title: 'Settings', url: '/settings', icon: 'settings' },
+    { title: 'Intro', url: '/intro', icon: 'easel' },
+    { title: '2048 Game', url: '/game-2048', icon: 'game-controller' },
+    { title: 'calc.name', url: '/calc', icon: 'calculator' },
+    { title: 'MAP.YANDEXMAPS', url: '/maps', icon: 'map' },
+    { title: 'GAZON.MENU', url: '/gazon', icon: 'sync' },
+    { title: 'Miniblog', url: '/miniblog', icon: 'book' },
+    { title: 'Kanban', url: '/kanban', icon: 'albums' },
+    { title: 'Recipes', url: '/recipes', icon: 'pizza' },
+    { title: 'Mood calendar', url: '/mood-calendar', icon: 'calendar' },
+    { title: 'CRYPTO_MODULE.COMPONENT_TITLE', url: '/cryptorates', icon: 'cash' },
+    { title: 'News', url: '/rss-data', icon: 'newspaper' },
+    { title: 'Notes', url: '/notes', icon: 'create' },
+    { title: 'ToDo list', url: '/todo-list', icon: 'checkmark-done' },
+    { title: 'ToDo task', url: '/todo-task', icon: 'checkmark-done-circle' },
+    { title: 'VideoPlayer', url: '/videoplayer', icon: 'videocam' },
+    { title: 'mplayer', url: '/mplayer', icon: 'musical-notes' },
+    { title: 'scilink', url: '/scilink', icon: 'earth' },
+    { title: 'barcode-scanner', url: '/barcode-scanner', icon: 'barcode' },
+    { title: 'camera', url: '/camera', icon: '' },
+    { title: 'File-viewer', url: '/file-viewer', icon: '' },
+    { title: 'Validations', url: '/validations', icon: '' },
+    { title: 'filters', url: '/filters', icon: 'reader-outline' },
+    { title: 'DragAndDrop', url: '/drag-and-drop', icon: '' },
+    { title: 'Shopping', url: '/shopping', icon: '' },
+    { title: 'RSA', url: '/rsa', icon: '' },
     { title: 'Signup', url: '/signup', icon: '' },
     { title: 'Login', url: '/login', icon: '' },
     { title: 'Forgot password', url: '/forgot-password', icon: '' },
+    { title: 'TERMS_TITLE', url: '/terms-of-service', icon: '' },
+    {
+      title: 'PRIVACY_TITLE',
+      url: '/privacy-policy',
+      icon: 'battery-full-outline',
+    },
     { title: 'User', url: '/user', icon: '' },
     { title: 'Contact card', url: '/contact-card', icon: '' },
-    { title: 'Recipes', url: '/recipes', icon: '' },
-    { title: 'CRYPTO_MODULE.COMPONENT_TITLE', url: '/cryptorates', icon: '' },
-    { title: 'News', url: '/rss-data', icon: '' },
-    { title: 'Notes', url: '/notes', icon: 'Пометки' },
-    { title: 'ToDo list', url: '/todo-list', icon: 'todo-list' },
-    { title: 'ToDo task', url: '/todo-task', icon: 'todo-task'},
-    { title: 'VideoPlayer', url: '/videoplayer', icon: '' },
-    { title: 'filters', url: '/filters', icon: 'reader-outline' },
-    { title: 'Validations', url: '/validations', icon: '' },
-    { title: 'barcode-scanner', url: '/barcode-scanner', icon: '' },
-    { title: 'scilink', url: '/scilink', icon: '' },
-    { title: 'camera', url: '/camera', icon: '' },
-    { title: 'DragAndDrop', url: '/drag-and-drop', icon: '' },
-    { title: 'mplayer', url: '/mplayer', icon: '' },
-    { title: 'File-viewer', url: '/file-viewer', icon: '' },
-    { title: 'Shopping', url: '/shopping', icon: '' },
     // Добавляем поле для перехода на страницу пометок
-    { title: 'Компоненты в стадии разработки:', url: '/front-layout', icon: '' },
+    { title: 'Water-tracker', url: '/water-tracker', icon: 'water' },    
     { title: 'Inbox', url: '/folder/inbox', icon: 'входящие' },
     { title: 'Deals', url: '/deals', icon: '' },
     { title: 'Fashion', url: '/fashion', icon: '' },
     { title: 'Profile', url: '/profil', icon: '' },
-    { title: 'RSA', url: '/rsa', icon: ''},
-    { title: 'calc.name', url: '/calc', icon: ''},
   ];
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('ru');
-    this.translate.addLangs(['en',"ru"])
+    this.translate.addLangs(['en', 'ru']);
     this.translate.use('ru');
   }
 

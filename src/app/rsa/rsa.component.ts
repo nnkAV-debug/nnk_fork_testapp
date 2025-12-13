@@ -8,6 +8,7 @@ import { modPow } from 'bigint-crypto-utils';
 })
 export class RsaComponent  implements OnInit {
 
+  titleText: string = "Генерация ключей RSA"
   pNum: number = 37;
   qNum: number = 41;
   pList: number[] = [];

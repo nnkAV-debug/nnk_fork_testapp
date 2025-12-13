@@ -91,7 +91,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     GazonComponent,
   ],
   imports: [
-    CalcModule,
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(),

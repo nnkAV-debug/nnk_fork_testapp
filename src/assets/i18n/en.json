@@ -102,12 +102,12 @@
     "MAP_WITH_POINT": "Map with a dot",
     "MAP_WITH_POINT_TEXT": "This is already a map with a label through the code and processing by the click coordinate."
   },
-  "NOTES":{
+  "NOTES": {
     "TEXT_NOTES": "Text of the note",
     "NOTES_MISSING": "Notes are missing",
     "DELETE_MARKED_NOTES": "Delete all marked notes"
   },
-  "GAZON":{
+  "GAZON": {
     "MENU": "Format Converter"
   },
       "calc": {
@@ -133,6 +133,20 @@
       "SUBTITLE": "Calculate value and press \"Apply\"",
       "APPLY_BUTTON": "Apply result",
       "CLOSE_BUTTON": "Close"
-    }
-
+    },
+  "FORM": {
+    "TITLE": "Form with calculator integration",
+    "SUBTITLE": "Use calculator to fill in fields",
+    "AMOUNT_LABEL": "Amount",
+    "AMOUNT_PLACEHOLDER": "Enter value or use calculator",
+    "RESULT_LABEL": "Calculation result",
+    "USE_RESULT_BUTTON": "Use result",
+    "CLEAR_FORM_BUTTON": "Clear form"
+  },
+  "POPUP": {
+    "TITLE": "Form calculator",
+    "SUBTITLE": "Calculate value and press \"Apply\"",
+    "APPLY_BUTTON": "Apply result",
+    "CLOSE_BUTTON": "Close"
+  }
 }

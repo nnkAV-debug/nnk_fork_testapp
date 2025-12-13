@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { CalcComponent } from './calc.component';
+import { G2048Component } from './g2048.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: CalcComponent,
-  },
+    component: G2048Component
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class CalcRoutingModule {}
+export class G2048RoutingModule {}
