@@ -46,6 +46,7 @@
   "Загрузка": "Loading",
   "Shopping": "Shopping",
   "RSA": "RSA encription",
+  "widget": "Widgets",
 
   "Recipes": "Recipes",
   "News": "News",
@@ -102,14 +103,54 @@
     "MAP_WITH_POINT": "Map with a dot",
     "MAP_WITH_POINT_TEXT": "This is already a map with a label through the code and processing by the click coordinate."
   },
-  "NOTES":{
+  "NOTES": {
     "TEXT_NOTES": "Text of the note",
     "NOTES_MISSING": "Notes are missing",
     "DELETE_MARKED_NOTES": "Delete all marked notes"
   },
-  "GAZON":{
+    "WIDGET":{
+    "COMPONENT_TITLE": "Widget",
+    "LOADING": "Loading",
+    "MOON_PHASE": "Phase",
+    "MOON_AGE": "Moon age",
+    "ADD_WIDGET": "Add widget",
+    "DAYS": "Days",
+    "INCREMENT": "+",
+    "DECREMENT": "-",
+    "RESET": "Reset",
+    "START": "Start",
+    "STOP": "Stop",
+    "LAP": "Lap",
+    "CLEAR": "Clear",
+    "TIME": "Time",
+    "LAPS": "Laps"
+    },
+      "calc": {
+      "name": "Сalculator"
+    },
+    
+    "CALCULATOR": {
+      "TITLE": "Calculator",
+      "BASIC": "Basic",
+      "ADVANCED": "Advanced"
+    },
+  "FORM": {
+    "TITLE": "Form with calculator integration",
+    "SUBTITLE": "Use calculator to fill in fields",
+    "AMOUNT_LABEL": "Amount",
+    "AMOUNT_PLACEHOLDER": "Enter value or use calculator",
+    "RESULT_LABEL": "Calculation result",
+    "USE_RESULT_BUTTON": "Use result",
+    "CLEAR_FORM_BUTTON": "Clear form"
+  },
+  "POPUP": {
+    "TITLE": "Form calculator",
+    "SUBTITLE": "Calculate value and press \"Apply\"",
+    "APPLY_BUTTON": "Apply result",
+    "CLOSE_BUTTON": "Close"
+  },
+    "GAZON":{
     "MENU": "Format Converter",
     "TITLE": "Format Converter"
   }
-
 }

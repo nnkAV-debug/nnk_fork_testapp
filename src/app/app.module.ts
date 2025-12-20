@@ -46,9 +46,12 @@ import { RsaComponent } from './rsa/rsa.component';
 import { MapsComponent } from './maps/maps.component';
 import { MiniblogComponent } from './miniblog/miniblog.component';
 import { AddBlogModalComponent } from './miniblog/add-blog-modal.component';
-import { GazonComponent } from './gazon/gazon.component';
+import { RssDataComponent } from './rss-data/rss-data.component';
+import { WidgetModule } from './widget/widget.module';
+import {CalcModule} from './calc/calc.module'
 import { WaterTrackerComponent } from './water-tracker/water-tracker.component';
-
+import { GazonComponent } from './gazon/gazon.component';
+// Фабрика для загрузчика переводов
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -85,8 +88,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     RsaComponent,
     MiniblogComponent,
     AddBlogModalComponent,
-    GazonComponent,
     WaterTrackerComponent,
+    GazonComponent,
   ],
   imports: [
     BrowserModule,
@@ -97,6 +100,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
     AppSharedComponentsModule,
     CommonModule,
+    WidgetModule,
     DragDropModule,
     IonicStorageModule.forRoot(),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
