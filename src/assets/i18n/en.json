@@ -108,7 +108,8 @@
     "DELETE_MARKED_NOTES": "Delete all marked notes"
   },
   "GAZON":{
-    "MENU": "Format Converter"
+    "MENU": "Format Converter",
+    "TITLE": "Format Converter"
   }
 
 }
