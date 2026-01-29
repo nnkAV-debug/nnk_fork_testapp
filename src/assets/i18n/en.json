@@ -69,6 +69,57 @@
   "FRONTPAGE": {
     "COMPONENT_TITLE": "FrontPage"
   },
+  "SETTINGS": {
+    "COMPONENT_TITLE": "Settings"
+  },
+  "INTRO": {
+    "COMPONENT_TITLE": "Intro"
+  },
+  "2048GAME": {
+    "COMPONENT_TITLE": "2048 Game"
+  },
+  "MINIBLOG": {
+    "COMPONENT_TITLE": "Miniblog"
+  },
+  "KANBAN": {
+    "COMPONENT_TITLE": "Kanban"
+  },
+  "RECIPES": {
+    "COMPONENT_TITLE": "Recipes"
+  },
+  "MOODCALENDAR": {
+    "COMPONENT_TITLE": "Mood calendar"
+  },
+  "NEWS": {
+    "COMPONENT_TITLE": "News"
+  },
+  "NOTES": {
+    "COMPONENT_TITLE": "Notes",
+    "TEXT_NOTES": "Note text",
+    "NOTES_MISSING": "Notes are missing",
+    "DELETE_MARKED_NOTES": "Delete all marked notes"
+  },
+  "TODOLIST": {
+    "COMPONENT_TITLE": "ToDo list"
+  },
+  "TODOTASK": {
+    "COMPONENT_TITLE": "ToDo task"
+  },
+  "VIDEOPLAYER": {
+    "COMPONENT_TITLE": "VideoPlayer"
+  },
+  "MPLAYER": {
+    "COMPONENT_TITLE": "MPlayer"
+  },
+  "SCILINK": {
+    "COMPONENT_TITLE": "Scientific links"
+  },
+  "BARCODE-SCANNER": {
+    "COMPONENT_TITLE": "Barcode scanner"
+  },
+  "CAMERA": {
+    "COMPONENT_TITLE": "Camera"
+  },
   "MPlayer": "MPlayer",
   "DragAndDrop": "Drag and Drop",
   "CRYPTO_MODULE": {
@@ -114,11 +165,7 @@
     "MAP_WITH_POINT": "Map with point",
     "MAP_WITH_POINT_TEXT": "This is a map with a marker via code and click coordinate handling."
   },
-  "NOTES": {
-    "TEXT_NOTES": "Note text",
-    "NOTES_MISSING": "Notes are missing",
-    "DELETE_MARKED_NOTES": "Delete all marked notes"
-  },
+  
   "GAZON": {
     "MENU": "Format converter"
   },
@@ -144,5 +191,9 @@
     "SUBTITLE": "Calculate value and click \"Apply\"",
     "APPLY_BUTTON": "Apply result",
     "CLOSE_BUTTON": "Close"
+  }
+
+  ,"DEVELOPMENT": {
+    "COMPONENTS": "Components in development:"
   }
 }

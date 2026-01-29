@@ -53,7 +53,7 @@ export class AppComponent {
     { title: 'User', url: '/user', icon: '' },
     // Добавляем поле для перехода на страницу пометок
     {
-      title: 'Компоненты в стадии разработки:',
+      title: 'DEVELOPMENT.COMPONENTS',
       url: '/front-layout',
       icon: '',
     },
