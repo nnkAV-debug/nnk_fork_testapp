@@ -14,6 +14,7 @@ export class AppComponent {
     { title: 'FrontPage', url: '/front-layout', icon: 'grid' },
     { title: 'Settings', url: '/settings', icon: 'settings' },
     { title: 'Intro', url: '/intro', icon: 'easel' },
+    { title: 'Face Detector', url: '/face-detector', icon: 'scan' },  // ДОБАВЛЕНО
     { title: '2048 Game', url: '/game-2048', icon: 'game-controller' },
     { title: 'calc.name', url: '/calc', icon: 'calculator' },
     { title: 'MAP.YANDEXMAPS', url: '/maps', icon: 'map' },
@@ -50,7 +51,6 @@ export class AppComponent {
     },
     { title: 'User', url: '/user', icon: '' },
     { title: 'Contact card', url: '/contact-card', icon: '' },
-    // Добавляем поле для перехода на страницу пометок
     { title: 'Water-tracker', url: '/water-tracker', icon: 'water' },    
     { title: 'Inbox', url: '/folder/inbox', icon: 'входящие' },
     { title: 'Deals', url: '/deals', icon: '' },
