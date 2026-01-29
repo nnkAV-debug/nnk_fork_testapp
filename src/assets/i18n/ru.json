@@ -42,15 +42,104 @@
   "Marriage": "Семейное положение",
   "News": "Новости",
   "Save": "Сохранить",
-  "FrontPage": "Все компоненты",
   "Shopping": "Список покупок",
   "RSA": "Шифрование RSA",
-  "widget": "Виджеты",
+  "Settings": "Настройки",
+  "2048 Game": "Игра 2048",
+  "Miniblog": "Миниблог",
+  "Kanban": "Канбан",
+  "Recipes": "Рецепты",
+  "VideoPlayer": "Видеоплеер",
+  "mplayer": "МПлеер",
+  "scilink": "Научные ссылки",
+  "camera": "Камера",
+  "File-viewer": "Просмотр файлов",
+  "Signup": "Регистрация",
+  "Login": "Вход",
+  "Forgot password": "Забыли пароль",
+  "User": "Пользователь",
+  "Deals": "Сделки",
+  "Fashion": "Мода",
+  "Profile": "Профиль",
+  "ToDo task": "Задача списка дел",
 
   "Mood calendar": "Календарь настроения",
   "Mood Statistic": "Статистика настроения",
 
   "Water-tracker": "Водный баланс",
+
+  "FRONTPAGE": {
+    "COMPONENT_TITLE": "Главная страница",
+    "FRONTPAGE_SETTINGS": "Настройки"
+    
+  },
+
+  "SETTINGS": {
+    "COMPONENT_TITLE": "Настройки"
+  },
+
+  "INTRO": {
+    "COMPONENT_TITLE": "Интро"
+  },
+
+  "2048GAME": {
+    "COMPONENT_TITLE": "Игра 2048"
+  },
+
+  "MINIBLOG": {
+    "COMPONENT_TITLE": "Миниблог"
+  },
+
+  "KANBAN": {
+    "COMPONENT_TITLE": "Канбан"
+  },
+
+  "RECIPES": {
+    "COMPONENT_TITLE": "Рецепты"
+  },
+
+  "MOODCALENDAR": {
+    "COMPONENT_TITLE": "Календарь настроения"
+  },
+
+  "NEWS": {
+    "COMPONENT_TITLE": "Новости"
+  },
+
+  "NOTES": {
+    "COMPONENT_TITLE": "Заметки",
+    "TEXT_NOTES": "Текст заметки",
+    "NOTES_MISSING": "Заметки отсутствуют",
+    "DELETE_MARKED_NOTES": "Удалить все выделенные заметки"
+  },
+
+  "TODOLIST": {
+    "COMPONENT_TITLE": "Список дел"
+  },
+
+  "TODOTASK": {
+    "COMPONENT_TITLE": "Задачи из списка дел"
+  },
+
+  "VIDEOPLAYER": {
+    "COMPONENT_TITLE": "Видео плеер"
+  },
+
+  "MPLAYER": {
+    "COMPONENT_TITLE": "Мплеер"
+  },
+
+  "SCILINK": {
+    "COMPONENT_TITLE": "Научные ссылки"
+  },
+
+  "BARCODE-SCANNER": {
+    "COMPONENT_TITLE": "Сканер штрих-кодов"
+  },
+
+  "CAMERA": {
+    "COMPONENT_TITLE": "Камера"
+  },
 
   "MPlayer": "МПлеер",
   "DragAndDrop": "Перетаскивание",
@@ -98,11 +187,8 @@
     "MAP_WITH_POINT": "Карта с точкой",
     "MAP_WITH_POINT_TEXT": "Это уже карта с меткой через код и обработкой координатой клика."
   },
-  "NOTES": {
-    "TEXT_NOTES": "Текст заметки",
-    "NOTES_MISSING": "Заметки отсутствуют",
-    "DELETE_MARKED_NOTES": "Удалить все выделенные заметки"
-  },
+  
+
   "WIDGET":{
     "COMPONENT_TITLE": "Виджеты",
     "LOADING": "Загрузка",
@@ -147,5 +233,9 @@
     "GAZON":{
     "MENU": "Конвертер форматов",
     "TITLE": "Конвертер форматов"
+  }
+
+  ,"DEVELOPMENT": {
+    "COMPONENTS": "Компоненты в стадии разработки:"
   }
 }
